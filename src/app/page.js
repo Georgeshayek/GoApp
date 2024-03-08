@@ -24,19 +24,16 @@ async function getData() {
 export default async function Home() {
   const data = await getData()
   const arr=data.props.data.data.sections
-  const dataTosend=arr.map(mov=>{
+  const dataToSend=arr.map(mov=>{
     return({image:mov.details.image,title:mov.title,description:mov.details.cta_text})
   })
-  console.log(dataTosend)
+  console.log(dataToSend)
   
   return (
     <>
-    <div className="bg-[#000]">
-      <Navbar/>
+  
       <Hero/>
-      <Content data={dataTosend}/>
-      <Footer/>
-    </div>
+      <Content data={dataToSend}/>
     </>
   );
 }

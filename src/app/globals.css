@@ -16,10 +16,27 @@
   }
 }
 
+.swiper-button-next{
+  margin-right: 410px;
 
+}
+.swiper-button-prev{
+  margin-left: 410px;
+}
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+  width: 120px;
+  padding: 7px 14px;
+  font-size:2px;
+  border-radius:  9999px ;
 
+    background-color: #00cc99;
+    color: white;
+
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
 }
