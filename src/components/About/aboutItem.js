@@ -1,3 +1,4 @@
+import { FaArrowRight } from "react-icons/fa6";
 import Image from "next/image"
 const AboutItem=(props)=>{
     
@@ -8,7 +9,7 @@ const AboutItem=(props)=>{
         <h1 className={`pb-2 ${props.active?"text-black font-bold":"text-gray-500"}`}>{props.title}</h1>
         <p className={`${props.active?"text-black font-semibold py-2":"text-gray-500"}`}> {props.description?props.description:"lorem ipsum date gsduiojss"}</p>
          </div>
-    <button className={`border border-transparent ${props.active?"border-b-blue-500 font-semibold":"border-b-gray-500 text-gray-500"}`}>Know more</button>
+    <button className={`border border-transparent flex justify-between items-center px-4 ${props.active?"border-b-blue-500 font-semibold":"border-b-gray-500 text-gray-500"}`}><p className="pr-6">Know more</p><FaArrowRight className={`w-4 h-4 ${props.active?"text-blue-500":"text-gray-500"}`}/></button>
     </div>
     </>)
 }

@@ -16,19 +16,22 @@
   }
 }
 
+
 .swiper-button-next{
-  margin-right: 410px;
+  
+  right: 410px !important;
 
 }
 .swiper-button-prev{
-  margin-left: 410px;
+  left: 410px !important;
+
 }
 .swiper-button-next:after, 
 .swiper-button-prev:after {
   width: 120px;
-  padding: 7px 14px;
-  font-size:2px;
-  border-radius:  9999px ;
+  padding: 7px 12px;
+  font-size:25px !important;
+  border-radius:  99999px ;
 
     background-color: #00cc99;
     color: white;
