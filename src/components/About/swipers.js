@@ -11,11 +11,17 @@ import AboutItem from './aboutItem';
 import { useMediaQuery } from "react-responsive";
 
 const AboutSwiper=(props) => {
-    const [activeIndex, setActiveIndex] = useState(-1);
+    const [activeIndex, setActiveIndex] = useState(0);
     const isMaxLg = useMediaQuery({ maxWidth: 1023 });
     const isMaxLg2 = useMediaQuery({ minWidth: 1023 });
-
-    useEffect(()=>{isMaxLg?setActiveIndex(prev=>prev-1):setActiveIndex(prev=>prev+1); console.log(isMaxLg)},[isMaxLg]);
+    
+    useEffect(()=>{
+      if(isMaxLg)
+      setActiveIndex(prev=>prev-1); console.log("1")},[isMaxLg]);
+    useEffect(()=>{
+      if(isMaxLg2)
+      setActiveIndex(prev=>prev+1); console.log("1")},[isMaxLg2]);
+      useEffect(()=>setActiveIndex(1),[])
 
   return (
     <div className="container mx-auto">
