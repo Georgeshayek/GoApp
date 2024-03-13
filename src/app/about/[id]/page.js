@@ -29,20 +29,20 @@ const AboutDetails= async ()=>{
     console.log(dataToUse)
     return(<>
     <div className="container mx-auto">
-        <div className="py-4 px-6">
+        <div className="py-4 px-6 max-lg:px-4">
         <div className="flex items-center justify-center">
     <Image  src={dataToUse.image} width={600} height={300} className="object-cover rounded-xl" alt="About"/>
     </div>
         <div>
     <h1 className="text-[#f9f9f9] text-center py-4">{dataToUse.title}</h1>
     </div>
-    <div className="grid grid-cols-4 place-content-center gap-4 px-12 ">
-        <div className=" col-start-1 col-span-2"><p className="text-white font-semibold ">{dataToUse.text}</p></div>
-        <div className="col-start-3 col-span-2 place-self-center text-white">
-            <p className="font-semibold">CLIENT: {dataToUse.client}</p>
-            <p className="font-semibold">DIRECTOR: {dataToUse.directors}</p>
-            <p className="font-semibold">DP: {dataToUse.client}</p>
-            <p className="font-semibold">AGENCY: {dataToUse.agency}</p>
+    <div className="grid lg:grid-cols-6 max-lg:grid-rows-2 lg:place-content-end max-lg:place-content-end gap-3 lg:px-16  ">
+        <div className=" lg:col-start-2 lg:col-span-2 lg:place-self-end "><p className="text-white font-semibold lg:pl-2 max-lg:pl-4 ">{dataToUse.text}</p></div>
+        <div className="lg:col-start-4 lg:col-span-2 lg:place-self-end max-lg:place-self-center text-white">
+        {dataToUse.client&&<p className="font-semibold pb-2">CLIENT: {dataToUse.client}</p>}    
+            {dataToUse.directors&&<p className="font-semibold pb-2">DIRECTOR: {dataToUse.directors}</p>}
+            {dataToUse.cinematographer&&<p className="font-semibold pb-2">DP: {dataToUse.cinematographer}</p>}
+            {dataToUse.agency&&<p className="font-semibold pb-2">AGENCY: {dataToUse.agency}</p>}
         </div>
         </div>
     
