@@ -3,17 +3,14 @@
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useSwiper } from "swiper/react";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { useEffect, useState,useRef } from "react";
-import { useMediaQuery } from "react-responsive";
-import SwiperButtonNext from "./swipperButtonNext";
-import { data } from "autoprefixer";
+import {  useState,useRef } from "react";
+
 
 const SwiperDetail = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -45,9 +42,9 @@ const SwiperDetail = () => {
 	const length=dataArr.length-1;
 	return (
 		<div className="container mx-auto py-4">
-            <div className="grid lg:grid-cols-2  max-lg:grid-rows-3 max-lg:px-2 lg:px-48 gap-2 ">
-                <div className=" lg:col-span-1 lg:col-start-1 max-lg:row-start-1 max-lg:row-span-1 flex flex-col px-6 lg:justify-start lg:items-start max-lg:justify-center max-lg:items-center ">
-                    <h1 className={` ease-in duration-300 text-[1.5rem]  ${activeIndex==0? "text-white font-semibold":"text-gray-600"}`}> Hello world</h1>
+            <div className="lg:grid  lg:grid-cols-2   max-lg:px-2 lg:px-48 gap-2 ">
+                <div className=" lg:col-span-1 lg:col-start-1 max-lg:row-start-1 max-lg:row-span-1 flex flex-col px-6 lg:justify-start lg:items-start max-lg:justify-center max-lg:items-center max-lg:py-6  ">
+                    <h1 className={`  text-[1.5rem]  ${activeIndex==0? "text-white font-semibold":"text-gray-600"}`}> Hello world</h1>
 					<div  className={` ease-in duration-300 px-[150px] h-1 ${activeIndex==0? "bg-white px-[200px] font-semibold":"bg-gray-600"}`}> </div>
 					<h1 className={` ease-in duration-300 text-[1.5rem]  ${activeIndex==1? "text-white font-semibold":"text-gray-600"}`}> Hello world</h1>
 					<div  className={` ease-in duration-300 px-[150px] h-1 ${activeIndex==1? "bg-white px-[200px] font-semibold":"bg-gray-700"}`}> </div>
@@ -61,30 +58,29 @@ const SwiperDetail = () => {
                 <button disabled={activeIndex==dataArr.length-1} onClick={handleNextButtonClick} className="bg-transparent border border-white rounded-full text-white  w-10 h-10 flex justify-center items-center disabled:bg-green-500"><FaArrowRight className="w-4 h-4"/></button>
                             </div>
                 </div>
-                <div className="lg:col-span-1 lg:px-4 max-lg:row-span-1">
+              <div>
 			<Swiper
                 ref={swiperRef}
-				modules={[Navigation, Pagination, Scrollbar, A11y]}
 				spaceBetween={30}
 				slidesPerView={1}
-				onSwiper={(swiper) => console.log(swiper.realIndex)}
-				onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)
-					
-				}
+				onSwiper={(swiper) => console.log(swiper.activeIndex)}
+				onSlideChange={(swiper) =>  setActiveIndex(swiper.activeIndex)}
 			>
              
-				{dataArr.map((mov, index) => {
-					return (
-						<SwiperSlide activeIndex className=" bg-slate-800  lg:px-10 max-lg:px-2 py-8">
-							<div className="">
-								<p className="text-white text-[12px]">{mov.para}</p>
-                                </div>
+			 {dataArr.map((mov, index) => {
+					return (<div className="">
+						<SwiperSlide activeindex className=" bg-slate-700 px-2 py-2">
+								<p className="text-white text-[12px] text-center py-8 " >{mov.para}</p>
 						</SwiperSlide>
+						</div>
 					);
 				})}
+						
+					
+			
                            
 			</Swiper>
-            </div>
+			</div>
 			<div className="flex justify-center px-2 self-center py-6 lg:hidden	">
                 <button disabled={activeIndex==0} className="bg-transparent border border-white disabled:bg-green-500 rounded-full mr-2 w-10 h-10 flex justify-center text-white items-center" onClick={handlePrevButtonClick}><FaArrowLeft className="w-4 h-4"/></button>
                 <button disabled={activeIndex==dataArr.length-1} onClick={handleNextButtonClick} className="bg-transparent border border-white rounded-full text-white  w-10 h-10 flex justify-center items-center disabled:bg-green-500"><FaArrowRight className="w-4 h-4"/></button>

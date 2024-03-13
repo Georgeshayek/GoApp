@@ -48,6 +48,7 @@ const AboutDetails= async ()=>{
     </div>
     </div>
     <SwiperDetail/>
+
     </>)
 
 }
