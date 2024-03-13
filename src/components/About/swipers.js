@@ -11,7 +11,7 @@ import AboutItem from './aboutItem';
 import { useMediaQuery } from "react-responsive";
 
 const AboutSwiper=(props) => {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(0);
     const isMaxLg = useMediaQuery({ maxWidth: 1023 });
     const isMaxLg2 = useMediaQuery({ minWidth: 1023 });
     
@@ -31,12 +31,12 @@ const AboutSwiper=(props) => {
       centeredSlides
       navigation
       
-      onSwiper={(swiper) => console.log(swiper.activeIndex)}
-      onSlideChange={(swiper) =>setActiveIndex(swiper.activeIndex)}
+      onSwiper={(swiper) => console.log(swiper.realIndex)}
+      onSlideChange={(swiper) =>setActiveIndex(swiper.realIndex)}
     >
         
         {props.data.map((mov,index)=>{  
-    return   ( <SwiperSlide activeIndex ><AboutItem title={mov.title} description={mov.description} image={mov.image} active={index === activeIndex}/></SwiperSlide>)
+    return   ( <SwiperSlide activeIndex ><AboutItem id={mov.id} title={mov.title} description={mov.description} image={mov.image} active={index === activeIndex}/></SwiperSlide>)
         })}
       
     
