@@ -15,17 +15,16 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-
-.swiper-button-next{
-  
-  right: 410px !important;
-
+@media screen and (min-width: 1023px) {
+  .swiper-button-next {
+    right: 410px !important;
+  }
+  .swiper-button-prev {
+    left: 410px !important;
+  }
 }
-.swiper-button-prev{
-  left: 410px !important;
 
-}
+
 .swiper-button-next:after, 
 .swiper-button-prev:after {
   width: 120px;
@@ -41,5 +40,6 @@
   .text-balance {
     text-wrap: balance;
   }
+ 
   
 }
