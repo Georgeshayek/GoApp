@@ -41,24 +41,24 @@ const SwiperDetail = () => {
 	];
 	const length=dataArr.length-1;
 	return (
-		<div className="container mx-auto py-4">
+		<div className="container mx-auto py-4 ">
             <div className="lg:grid  lg:grid-cols-2   max-lg:px-2 lg:px-48 gap-2 ">
                 <div className=" lg:col-span-1 lg:col-start-1 max-lg:row-start-1 max-lg:row-span-1 flex flex-col px-6 lg:justify-start lg:items-start max-lg:justify-center max-lg:items-center max-lg:py-6  ">
                     <h1 className={`  text-[1.5rem]  ${activeIndex==0? "text-white font-semibold":"text-gray-600"}`}> Hello world</h1>
-					<div  className={` ease-in duration-300 px-[150px] h-1 ${activeIndex==0? "bg-white px-[200px] font-semibold":"bg-gray-600"}`}> </div>
-					<h1 className={` ease-in duration-300 text-[1.5rem]  ${activeIndex==1? "text-white font-semibold":"text-gray-600"}`}> Hello world</h1>
-					<div  className={` ease-in duration-300 px-[150px] h-1 ${activeIndex==1? "bg-white px-[200px] font-semibold":"bg-gray-700"}`}> </div>
+					<div  className={` ease-in duration-300 px-[150px] max-lg:px-[120px] h-1 ${activeIndex==0? "bg-white max-lg:px-[160px] px-[200px] font-semibold":"bg-gray-600"}`}> </div>
+					<h1 className={` ease-in duration-300 text-[1.5rem]   ${activeIndex==1? "text-white font-semibold":"text-gray-600"}`}> Hello world</h1>
+					<div  className={` ease-in duration-300 px-[150px] max-lg:px-[120px] h-1 ${activeIndex==1? "bg-white max-lg:px-[160px] px-[200px] font-semibold":"bg-gray-700"}`}> </div>
 					<h1 className={` ease-in duration-300 text-[1.5rem]  ${activeIndex==2? "text-white font-semibold":"text-gray-600"}`}> Hello world</h1>
-					<div  className={` ease-in duration-300 px-[150px] h-1 ${activeIndex==2? "bg-white px-[200px] font-semibold":"bg-gray-800"}`}> </div>
+					<div  className={` ease-in duration-300 px-[150px] max-lg:px-[120px] h-1 ${activeIndex==2? "bg-white max-lg:px-[160px] px-[200px] font-semibold":"bg-gray-800"}`}> </div>
 					<h1 className={` ease-in duration-300 text-[1.5rem]  ${activeIndex==3? "text-white font-semibold":"text-gray-600"}`}> Hello world</h1>
-					<div  className={` ease-in duration-300 px-[150px] h-1 ${activeIndex==3? "bg-white px-[200px] font-semibold":"bg-gray-900"}`}> </div>
+					<div  className={` ease-in duration-300 px-[150px] max-lg:px-[120px] h-1 ${activeIndex==3? "bg-white max-lg:px-[160px] px-[200px] font-semibold":"bg-gray-900"}`}> </div>
 
 				<div className="flex justify-between items-end px-4 self-end py-6 max-lg:hidden	">
                 <button disabled={activeIndex==0} className="bg-transparent border border-white disabled:bg-green-500 rounded-full mr-2 w-10 h-10 flex justify-center text-white items-center" onClick={handlePrevButtonClick}><FaArrowLeft className="w-4 h-4"/></button>
                 <button disabled={activeIndex==dataArr.length-1} onClick={handleNextButtonClick} className="bg-transparent border border-white rounded-full text-white  w-10 h-10 flex justify-center items-center disabled:bg-green-500"><FaArrowRight className="w-4 h-4"/></button>
                             </div>
                 </div>
-              <div>
+              <div className="max-lg:px-4">
 			<Swiper
                 ref={swiperRef}
 				spaceBetween={30}
@@ -69,7 +69,7 @@ const SwiperDetail = () => {
              
 			 {dataArr.map((mov, index) => {
 					return (<div className="">
-						<SwiperSlide activeindex className=" bg-slate-700 px-2 py-2">
+						<SwiperSlide activeindex className=" bg-slate-700 px-2 py-2 rounded-xl">
 								<p className="text-white text-[12px] text-center py-8 " >{mov.para}</p>
 						</SwiperSlide>
 						</div>
