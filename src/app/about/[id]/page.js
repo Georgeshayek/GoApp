@@ -3,6 +3,7 @@ import { useParams } from "next/navigation"
 import axios from "@/utils/axios";
 import Image from "next/image";
 import SwiperDetail from "@/components/About/AboutDetails/swiperr";
+import Link from "next/link";
 async function getData() {
   let data;
   await axios
@@ -26,6 +27,8 @@ const AboutDetails= async ()=>{
     const data=await getData()
     const arr=data.props.data.data
     const dataToUse=arr.find(mov=>mov.id==id)
+    const index=arr.findIndex(mov=>mov.id==id)
+    console.log(arr[index].id)
     return(<>
     <div className="container mx-auto">
         <div className="py-4 px-6 max-lg:px-4">
@@ -41,11 +44,17 @@ const AboutDetails= async ()=>{
         {dataToUse.client&&<p className="font-semibold pb-2">CLIENT: {dataToUse.client}</p>}    
             {dataToUse.directors&&<p className="font-semibold pb-2">DIRECTOR: {dataToUse.directors}</p>}
             {dataToUse.cinematographer&&<p className="font-semibold pb-2">DP: {dataToUse.cinematographer}</p>}
-            {dataToUse.agency&&<p className="font-semibold pb-2">AGENCY: {dataToUse.agency}</p>}
+            {dataToUse.agency&&<p className="font-semibold pb-2">AGENCY: {dataToUse.agency}  </p>}
         </div>
         </div>
     
     </div>
+    </div>
+    <div className="flex py-5 lg:justify-end max-lg:justify-center items-center  lg:px-16 max-lg:px-2"> <Link className={` px-4 ${index!=0?"text-white font-semibold": " pointer-events-none text-gray-500"}`} aria-disabled={index==0} href={`/about/${index!=0?arr[index-1].id:0}`}>Previous</Link> 
+                      <div className="bg-white w-1 h-3  "></div>
+                      <p className="text-white px-4"> Our Work</p>
+                      <div className="bg-white w-1 h-3 "></div>
+                      <Link className={` px-4 ${index!=arr.length-1?"text-white font-semibold": " pointer-events-none text-gray-500"}`} aria-disabled={index==arr.length} href={`/about/${arr[index+1].id}`}>Next</Link>
     </div>
     <SwiperDetail/>
 
