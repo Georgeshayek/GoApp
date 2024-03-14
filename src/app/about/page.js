@@ -20,7 +20,6 @@ async function getData() {
 }
 const  About=async()=>{
     const data=await getData()
-    console.log(data)
     const arr=data.props.data.data
     const dataToSend=arr.map(mov=>{return{ id:mov.id,title:mov.title,image:mov.image,description:mov.description}})
     return(
