@@ -54,7 +54,7 @@ const AboutDetails= async ()=>{
                       <div className="bg-white w-1 h-3  "></div>
                       <p className="text-white px-4"> Our Work</p>
                       <div className="bg-white w-1 h-3 "></div>
-                      <Link className={` px-4 ${index!=arr.length-1?"text-white font-semibold": " pointer-events-none text-gray-500"}`} aria-disabled={index==arr.length} href={`/about/${arr[index+1].id}`}>Next</Link>
+                      <Link className={` px-4 ${index!=arr.length-1?"text-white font-semibold": " pointer-events-none text-gray-500"}`} aria-disabled={index==arr.length-1} href={`/about/${index!=arr.length-1?arr[index+1].id:0}`}>Next</Link>
     </div>
     <SwiperDetail/>
 
