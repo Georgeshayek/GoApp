@@ -39,7 +39,7 @@ const AboutDetails= async ()=>{
     <h1 className="text-[#f9f9f9] text-center py-4">{dataToUse.title}</h1>
     </div>
     <div className="grid lg:grid-cols-6 max-lg:grid-rows-2  max-lg:place-content-end gap-3 lg:px-16  ">
-        <div className=" lg:col-start-2 lg:col-span-2 lg:place-self-center "><p className="text-white font-semibold lg:pl-2 max-lg:pl-4 ">{dataToUse.text}</p></div>
+        <div className=" lg:col-start-2 lg:col-span-2 lg:place-self-center "><p className="text-white font-semibold lg:pl-2 max-lg:pl-4 ">{`${dataToUse.text?dataToUse.text:"lorem ipsum etlodadklasaskj gklsdjlgkds ljkgdsjkldsgl kljkdskjlsfljkgslk jsdgljkdslgjk "}`}</p></div>
         <div className="lg:col-start-4 lg:col-span-2 lg:place-self-end max-lg:place-self-center text-white">
         {dataToUse.client&&<p className="font-semibold pb-2">CLIENT: {dataToUse.client}</p>}    
             {dataToUse.directors&&<p className="font-semibold pb-2">DIRECTOR: {dataToUse.directors}</p>}
