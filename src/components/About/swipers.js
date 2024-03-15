@@ -31,12 +31,11 @@ const AboutSwiper=(props) => {
       centeredSlides
       navigation
       
-      onSwiper={(swiper) => console.log(swiper.realIndex)}
       onSlideChange={(swiper) =>setActiveIndex(swiper.realIndex)}
     >
         
         {props.data.map((mov,index)=>{  
-    return   ( <SwiperSlide activeIndex ><AboutItem id={mov.id} title={mov.title} description={mov.description} image={mov.image} active={index === activeIndex}/></SwiperSlide>)
+    return   ( <SwiperSlide key={index}  ><AboutItem id={mov.id} title={mov.title} description={mov.description} image={mov.image} active={index === activeIndex}/></SwiperSlide>)
         })}
       
     

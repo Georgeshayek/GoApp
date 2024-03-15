@@ -1,6 +1,9 @@
 import ImageTextHover from "@/components/Contact/ImagetextHover"
 import ImageTextRev from "@/components/Contact/ImagettextRev"
+export const metadata = {
+    title: "Contact",
 
+}  
 const Contact=()=>{
     return(
         <div className=" text-white py-4  lg:px-4">

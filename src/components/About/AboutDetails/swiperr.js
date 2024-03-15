@@ -75,8 +75,8 @@ const SwiperDetail = () => {
 			>
              
 			 {dataArr.map((mov, index) => {
-					return (<div className="">
-						<SwiperSlide activeindex className=" bg-slate-700 px-2 py-2 rounded-xl ease-in duration-500">
+					return (<div key={index} className="">
+						<SwiperSlide  className=" bg-slate-700 px-2 py-2 rounded-xl ease-in duration-500">
 								<p className="text-white text-[12px] text-center py-8 " >{mov.para}</p>
 						</SwiperSlide>
 						</div>
