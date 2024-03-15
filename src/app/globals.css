@@ -18,9 +18,11 @@
 @media screen and (min-width: 1023px) {
   .swiper-button-next {
     right: 410px !important;
+    bottom: 60px !important;
   }
   .swiper-button-prev {
     left: 410px !important;
+    bottom: 60px !important;
   }
 }
 
