@@ -18,14 +18,21 @@
 @media screen and (min-width: 1023px) {
   .swiper-button-next {
     right: 410px !important;
-    bottom: 60px !important;
+    
   }
   .swiper-button-prev {
     left: 410px !important;
-    bottom: 60px !important;
   }
 }
-
+@media screen and (max-width: 423px) {
+  .swiper-button-next {
+    top: 40% !important;
+    
+  }
+  .swiper-button-prev {
+    top: 40% !important;
+  }
+}
 
 .swiper-button-next:after, 
 .swiper-button-prev:after {
@@ -33,6 +40,7 @@
   padding: 7px 12px;
   font-size:25px !important;
   border-radius:  99999px ;
+ 
 
     background-color: #00cc99;
     color: white;
