@@ -57,7 +57,8 @@ export default async function Home() {
     <>
   
       <Hero/>
-      <Content data={dataToSend}/>
+      {dataToSend &&<Content data={dataToSend}/>}
+      
     </>
   );
 }

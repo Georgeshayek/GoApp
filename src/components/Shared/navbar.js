@@ -12,7 +12,7 @@ const Navbar=()=>{
 
     return (
         <div className="container mx-auto">
-        <nav className="py-6 lg:px-12 " >
+        <nav className="max-lg:px-4 lg:px-12 " >
             
             <div className="flex justify-between max-lg:px-2 items-center relative">
                 <div >

@@ -24,7 +24,7 @@ const  About=async()=>{
     const dataToSend=arr.map(mov=>{return{ id:mov.id,title:mov.title,image:mov.image,description:mov.description}})
     return(
     <div className="bg-white py-4 max-lg:px-4">
-    <AboutSwiper data= {dataToSend}/>
+    {dataToSend && <AboutSwiper data= {dataToSend}/>}
     </div>)
 }
 export default About

@@ -31,7 +31,8 @@ const AboutDetails= async ()=>{
     console.log(arr[index].id)
     return(<>
     <div className="container mx-auto">
-        <div className="py-4 px-6 max-lg:px-4">
+    
+    {dataToUse &&    <div className="py-4 px-6 max-lg:px-4">
         <div className="flex items-center justify-center">
     <Image  src={dataToUse.image} width={600} height={300} className="object-cover rounded-xl" alt="About"/>
     </div>
@@ -49,14 +50,16 @@ const AboutDetails= async ()=>{
         </div>
     
     </div>
+}
     <div className="flex py-5 lg:justify-end max-lg:justify-center items-center  lg:px-16 max-lg:px-2"> <Link className={` px-4 ${index!=0?"text-white font-semibold": " pointer-events-none text-gray-500"}`} aria-disabled={index==0} href={`/about/${index!=0?arr[index-1].id:0}`}>Previous</Link> 
                       <div className="bg-white w-1 h-3  "></div>
                       <p className="text-white px-4"> Our Work</p>
                       <div className="bg-white w-1 h-3 "></div>
                       <Link className={` px-4 ${index!=arr.length-1?"text-white font-semibold": " pointer-events-none text-gray-500"}`} aria-disabled={index==arr.length-1} href={`/about/${index!=arr.length-1?arr[index+1].id:0}`}>Next</Link>
     </div>
+
     </div>
-  
+
     <SwiperDetail/>
 
     </>)
