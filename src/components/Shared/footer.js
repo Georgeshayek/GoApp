@@ -26,7 +26,7 @@ const Footer=()=>{
                         <p className="font-bold">contact us</p>
                     </div>
                     
-                    <div className="col-start-5 max-lg:col-start-1 lg:col-span-2 flex flex-col items-center justify-start ">
+                    <div className="lg:col-start-5 max-lg:col-start-1 lg:col-span-2 flex flex-col items-center justify-start ">
                     <div>
                     <h1 className="py-3">inquires</h1>
                     <p className="font-bold">briefme@localhost</p>
