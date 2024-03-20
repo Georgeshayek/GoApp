@@ -26,7 +26,7 @@ const Footer=()=>{
                         <p className="font-bold">contact us</p>
                     </div>
                     
-                    <div className="col-start-6 max-lg:col-start-1 col-span-2 flex flex-col items-start justify-start ">
+                    <div className="col-start-5 max-lg:col-start-1 col-span-2 flex flex-col items-start justify-start ">
                     <h1 className="py-3">inquires</h1>
                     <p className="font-bold">briefme@localhost</p>
                     </div>
@@ -35,8 +35,8 @@ const Footer=()=>{
                     <Link href="/"><FaInstagram className="w-8 h-8"/> </Link>
                     <Link href="/"><CiLinkedin className="w-9 h-9"/></Link>
                     </div>
-                    <div className="row-start-2  max-lg:row-start-4  max-lg:col-start-1 col-start-6 col-span-2 flex items-start justify-start">
-                    <p>privacy policies | terms & conditions </p>
+                    <div className="row-start-2  max-lg:row-start-4  max-lg:col-start-1 col-start-5 col-span-2  flex items-start justify-start ">
+                    <p className="">privacy policies | terms & conditions </p>
                     </div>
                 </div>
             </div>

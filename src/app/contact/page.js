@@ -7,7 +7,7 @@ export const metadata = {
 }  
 const Contact=()=>{
     return(
-        <div className=" text-white py-4  lg:px-4">
+        <div className=" text-white py-4 	 lg:px-4">
             <ImageTextRev imageUrl="/furnut.jpg" title="WE INSTITUTIONALIZE, PROTECT, AND GROW YOUR WEALTH" reverse={false}/>
             <ImageTextRev imageUrl="/furnut.jpg" title="WE INSTITUTIONALIZE, PROTECT, AND GROW YOUR WEALTH" reverse={true}/>
             <ImageTextHover/>
