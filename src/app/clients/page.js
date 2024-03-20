@@ -7,7 +7,7 @@ export const metadata = {
 const Clients=()=>{
     return(
         <div className=" text-white py-4 	 lg:px-4">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center max-lg:flex-col items-center">
             <ClientObject/>
             <ClientObject/>
             <ClientObject/>
