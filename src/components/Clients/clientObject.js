@@ -4,7 +4,7 @@ const ClientObject=()=>{
 return(
     <div className="px-16 max-lg:py-4">
     <div className="flex relative flex-col justify-center items-center">
-        <div className="flex   items-center border rounded-full border-white" >
+        <div className="flex  p-2 items-center border rounded-full border-white" >
             <Image src="/person.jpeg" width={120} height={160} className=" h-[120px] rounded-full object-cover"/>
         </div>
         <div className="w-1 h-16 bg-white" >
