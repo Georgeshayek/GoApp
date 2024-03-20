@@ -26,7 +26,7 @@ const Navbar=()=>{
 				<li className="max-lg:text-center max-lg:py-4  lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff}  className={`py-10 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/"?"underline decoration-blue-500":""}`} href="/">Home</Link></li>
 				<li className=" max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff}  className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/about"?"underline decoration-blue-500":""}`} href="/about">About</Link></li>
 				<li className="max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff}  className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/contact"?"underline decoration-blue-500":""}`} href="/contact">Contact</Link></li>
-                <li className="max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff} className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/clients"?"underline decoration-blue-500":""}`} href="/contact">Clients</Link></li>
+                <li className="max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff} className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/clients"?"underline decoration-blue-500":""}`} href="/clients">Clients</Link></li>
                 <li className="max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff} className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/partner"?"underline decoration-blue-500":""}`} href="/contact">Partners</Link></li>
 
         	</ul>
