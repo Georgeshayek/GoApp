@@ -1,11 +1,16 @@
 "use client"
 import Link from "next/link";
 import Image from 'next/image'
-import { useState } from "react";
+import { useState,useEffect,useRef } from "react";
 import { usePathname } from 'next/navigation'
+import gsap from "gsap";
 
 const Navbar=()=>{
-   
+    const nav=useRef();
+    useEffect(()=>{
+        const el=nav.current
+        gsap.fromTo(el,{duration:2.5,ease:"back.in",y:100},{duration:2.5,ease:"back.out",y:0})
+    },[])
     const path=usePathname();
     const [show, setShow] = useState(false);
     const toggleShow = () => {
@@ -17,7 +22,7 @@ const Navbar=()=>{
 
     return (
         <div className="container mx-auto">
-        <nav className=" lg:px-12 " >
+        <nav ref={nav} className=" lg:px-12 " >
             
             <div className="flex justify-between max-lg:px-6 items-center relative">
                 <div>
