@@ -77,6 +77,3 @@
   cursor: pointer;
   z-index: 1001; /* Ensure the close button appears above the video */
 }
-iframe{
-  width: 1000px;
-}
