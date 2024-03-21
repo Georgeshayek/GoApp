@@ -3,16 +3,9 @@ import Link from "next/link";
 import Image from 'next/image'
 import { useState } from "react";
 import { usePathname } from 'next/navigation'
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+
 const Navbar=()=>{
-    const container = useRef();
-    const button =useRef();
-const { contextSafe } = useGSAP({scope: container}); 
-const onFocus=contextSafe(() => {
-    gsap.to(button.current, {rotation: 360});
-});
+   
     const path=usePathname();
     const [show, setShow] = useState(false);
     const toggleShow = () => {
@@ -26,8 +19,8 @@ const onFocus=contextSafe(() => {
         <div className="container mx-auto">
         <nav className=" lg:px-12 " >
             
-            <div ref={container} className="flex justify-between max-lg:px-6 items-center relative">
-                <div ref={button} onClick={onFocus} >
+            <div className="flex justify-between max-lg:px-6 items-center relative">
+                <div>
                     <Link  href="/"><Image src="/logo.png" alt=" Logo" width={100} height={50}/></Link>
                 </div>
                 <button id="burger-btn" className="  block text-white lg:hidden" onClick={toggleShow}>&#9776;</button>
