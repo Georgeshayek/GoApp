@@ -55,15 +55,16 @@
 }
 .custom-modal-video {
   position: fixed;
-  top: 100%;
-  left: 70%;
+  top: 600px;
+  left: 1000px;
+  
   transform: translate(-50%, -50%);
   z-index: 1000; /* Ensure the video modal appears above the overlay */
 }
 @media screen and (max-width: 1023px) {
   .custom-modal-video {
-    left:10%;
-    top:50%;
+    top: 600px;
+  left: 1000px;
     width: 120px;
    
   }}
@@ -75,4 +76,7 @@
   right: 10px;
   cursor: pointer;
   z-index: 1001; /* Ensure the close button appears above the video */
+}
+iframe{
+  width: 1000px;
 }
