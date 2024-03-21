@@ -1,21 +1,29 @@
+"use client"
 import { FaInstagram } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 const Footer=()=>{
+    const div=useRef()
+    useEffect(()=>{
+        const el=div.current
+        gsap.fromTo(el,{opacity:0},{opacity:1,duration:2,scrollTrigger:{trigger:el}})
+    },[])
 
     return(
         <div className="bg-[#fe424c]">
         <div className="container mx-auto">
-            <div className="py-6 px-12 max-lg:px-2">
+            <div ref={div} className="py-6 px-12 max-lg:px-2">
                 <div className=" grid grid-cols-6 max-lg:grid-cols-2 text-white gap-2">
                     <div className="flex flex-col items-start justify-start">
                         <h1 className="py-3">sitemap</h1>
                         <Link href="/" className="font-bold">about us</Link>
-                        <Link href="/" className="font-bold">our work</Link>
-                        <Link href="/" className="font-bold">our clients</Link>
+                        <Link href="/about" className="font-bold">our work</Link>
+                        <Link href="/clients" className="font-bold">our clients</Link>
                         <Link href="/" className="font-bold">our teams</Link>
-                        <Link href="/" className="font-bold">contact us</Link>
+                        <Link href="/contact" className="font-bold">contact us</Link>
                     </div>
                     <div className="flex flex-col items-start justify-start">
                         <h1 className="py-3">offices</h1>
