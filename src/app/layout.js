@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Shared/navbar";
 import Footer from "@/components/Shared/footer";
 import axios from "@/utils/axios";
+import CustomCursor from "@/components/Shared/Customcursor";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -41,6 +42,7 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <div className="bg-[#000]">
+        <CustomCursor/>
       <Navbar/>
         {children}
         </div>

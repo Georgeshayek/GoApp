@@ -36,7 +36,7 @@ export default async function Home() {
   
   return (
     <>
-      <CustomCursor/>
+      
       <Hero/>
       {dataToSend &&<Content data={dataToSend}/>}
       
