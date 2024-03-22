@@ -17,9 +17,9 @@ const CustomCursor = () => {
         };
 
         const enterText = () => {
-            gsap.to(cursor, { backgroundColor: 'white',opacity:0.5, borderColor: 'black' });
-
+            gsap.to(cursor, { backgroundColor: 'white', opacity: 0.5, borderColor: 'black' });
         };
+
 
         const leaveText = () => {
             gsap.to(cursor, { backgroundColor: 'transparent', borderColor: 'blue' });
@@ -46,7 +46,7 @@ const CustomCursor = () => {
     return (
         <div
             ref={cursorRef}
-            className="w-12 h-12 fixed top-0 left-0 border-4 z-50 border-blue-500 rounded-full cursor-none"
+            className="w-12 h-12  -ml-[1.5rem] -mt-[1.5rem] items-center fixed top-0 left-0 border-4 z-50 border-blue-500  text-black rounded-full pointer-events-none	 cursor-none"
         ></div>
     );
 };
