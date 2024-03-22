@@ -12,7 +12,7 @@ const ImageTextRev=(props)=>{
         const text=textref.current
         gsap.fromTo(image, {
             opacity: 0,
-            x: `${props.reverse?"-100%":"100%"}`
+            x: `${props.reverse?"-45%":"45%"}`
         }, {
             opacity: 1,
             x: 0,
@@ -22,10 +22,9 @@ const ImageTextRev=(props)=>{
             }
         });
     
-        // Animation for the text with a delay
         gsap.fromTo(text, {
             opacity: 0,
-            x: `${props.reverse?"100%":"-100%"}`
+            x: `${props.reverse?"45%":"-45%"}`
         }, {
             opacity: 1,
             x: 0,
