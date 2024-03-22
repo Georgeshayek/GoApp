@@ -1,21 +1,12 @@
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
+import AboutItem from './aboutItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { useEffect, useState } from 'react';
-import AboutItem from './aboutItem';
-import { useMediaQuery } from "react-responsive";
-
+import {  useState } from 'react';
 const AboutSwiper=(props) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const isMaxLg = useMediaQuery({ maxWidth: 1023 });
-    const isMaxLg2 = useMediaQuery({ minWidth: 1023 });
-    
-   
 
   return (
     <div className="container mx-auto">
@@ -30,12 +21,11 @@ const AboutSwiper=(props) => {
       initialSlide={1}
       centeredSlides
       navigation
-      
       onSlideChange={(swiper) =>setActiveIndex(swiper.realIndex)}
     >
         
         {props.data.map((mov,index)=>{  
-    return   ( <SwiperSlide key={index}  ><AboutItem id={mov.id} title={mov.title} description={mov.description} image={mov.image} active={index === activeIndex}/></SwiperSlide>)
+    return   ( <SwiperSlide key={index}> <AboutItem id={mov.id} title={mov.title} description={mov.description} image={mov.image} active={index === activeIndex}/></SwiperSlide>)
         })}
       
     
