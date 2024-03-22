@@ -7,12 +7,12 @@ import gsap from "gsap";
 
 const Navbar=()=>{
     const nav=useRef();
-    useEffect(()=>{
-        const el=nav.current
-        gsap.fromTo(el,{duration:2.5,ease:"back.in",y:100 },{duration:2.5,ease:"back.out",y:0,onComplete:()=>{
-            gsap.to(el,{zIndex:50})
-        } })
-    },[])
+    // useEffect(()=>{
+    //     const el=nav.current
+    //     gsap.fromTo(el,{duration:2.5,ease:"back.in",y:100 },{duration:2.5,ease:"back.out",y:0,onComplete:()=>{
+    //         gsap.to(el,{zIndex:50})
+    //     } })
+    // },[])
     const path=usePathname();
     const [show, setShow] = useState(false);
     const toggleShow = () => {

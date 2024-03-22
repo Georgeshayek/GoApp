@@ -2,6 +2,8 @@
 import Image from "next/image"
 import gsap from "gsap"
 import { useRef,useEffect } from "react"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const ImageTextRev=(props)=>{
     const imgref=useRef()
     const textref=useRef()
