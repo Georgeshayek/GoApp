@@ -5,6 +5,7 @@ import Navbar from "@/components/Shared/navbar";
 import Image from "next/image";
 import axios from "@/utils/axios";
 import CustomCursor from "@/components/Shared/Customcursor";
+import { Suspense } from "react";
 
 
 async function getData() {
@@ -28,6 +29,7 @@ async function getData() {
 export default async function Home() {
   // const data1=await getData1()
   // metadata.title=data1.props.data.data.title
+
   const data = await getData()
   const arr=data.props.data.data.sections
   const dataToSend=arr.map(mov=>{
@@ -36,10 +38,8 @@ export default async function Home() {
   
   return (
     <>
-      
       <Hero/>
       {dataToSend &&<Content data={dataToSend}/>}
-      
     </>
   );
 }

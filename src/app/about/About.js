@@ -21,7 +21,7 @@ async function getData() {
   return { props: { data } };
 }
 
-const  About=async()=>{
+const  About=async(props)=>{
     const data=await getData()
     const arr=data.props.data.data
     const dataToSend=arr.map(mov=>{return{ id:mov.id,title:mov.title,image:mov.image,description:mov.description}})
@@ -30,7 +30,9 @@ const  About=async()=>{
       <Head>
         <title>About</title>
       </Head>
+    
     {dataToSend && <AboutSwiper data= {dataToSend}/>}
+    
     </div>)
 }
 export default About

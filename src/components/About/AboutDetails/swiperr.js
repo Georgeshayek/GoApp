@@ -19,7 +19,6 @@ const SwiperDetail = () => {
     const handleNextButtonClick = () => {
         const swiper = swiperRef.current.swiper;
         swiper.slideNext();
-		console.log(activeIndex)
     };
     const handlePrevButtonClick = () => {
         const swiper = swiperRef.current.swiper;
@@ -70,7 +69,6 @@ const SwiperDetail = () => {
                 ref={swiperRef}
 				spaceBetween={30}
 				slidesPerView={1}
-				onSwiper={(swiper) => console.log(swiper.activeIndex)}
 				onSlideChange={(swiper) =>  setActiveIndex(swiper.activeIndex)}
 			>
              

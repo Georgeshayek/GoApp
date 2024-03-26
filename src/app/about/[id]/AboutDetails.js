@@ -30,7 +30,6 @@ const AboutDetails= async ()=>{
     const arr=data.props.data.data
     const dataToUse=arr.find(mov=>mov.id==id)
     const index=arr.findIndex(mov=>mov.id==id)
-    console.log(arr[index].id)
     return(<>
     <Head><title>About{id}</title></Head>
     <div className="container mx-auto">
