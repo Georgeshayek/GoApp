@@ -3,19 +3,18 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import { useRef,useEffect } from "react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Import ScrollTrigger from gsap
 
 import gsap from "gsap";
 const VideoPlayer=()=>{
     const videoRef=useRef()
+    const divRef=useRef()
     useEffect(()=>{
-
+        const div=divRef.current
         const video=videoRef.current
-        gsap.registerPlugin(ScrollTrigger);
 
         gsap.to(video,{scrollTrigger:{
-            trigger:video,
-            start: 'top 80%',
+            trigger:div,
+            start: 'top center',
             onEnter: () => {
                 video.play();
               },
@@ -25,10 +24,9 @@ const VideoPlayer=()=>{
         }})
     },[])
     return(
-        <div className="flex flex-col justify-center py-10 items-center">
-        <video ref={videoRef} width="640" height="480" controls autoPlay >
-      <source src="fountain.mp4" type="video/mp4" />
-           Your browser does not support the video tag.
+        <div ref={divRef} className="flex flex-col justify-center py-10 items-center">
+        <video ref={videoRef} width="640" height="480" controls  muted  >
+      <source src="fountain.mp4" type="video/mp4"  />
     </video>
       </div>
     )
