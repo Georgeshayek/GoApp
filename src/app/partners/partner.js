@@ -25,7 +25,7 @@ const Partners=()=>{
     return (
       <>
       
-      <div className="py-16 px-4 text-white rounded-xl">
+      <div className="py-16 px-4 container mx-auto text-white rounded-xl">
         <Accordion open={open === 1} className="p-4 bg-slate-500  text-white" icon={open===1?<GrSubtract/>:<GrAdd/>}>
           <AccordionHeader className="flex justify-between w-full" onClick={() => handleOpen(1) } >What is Material Tailwind?</AccordionHeader>
           <AccordionBody className={`${open === 1 ? " " : "text-transparent"}`}>
