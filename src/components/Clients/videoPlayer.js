@@ -11,9 +11,11 @@ const VideoPlayer=()=>{
     useEffect(()=>{
 
         const video=videoRef.current
+        gsap.registerPlugin(ScrollTrigger);
+
         gsap.to(video,{scrollTrigger:{
             trigger:video,
-            start: 'top top',
+            start: 'top 80%',
             onEnter: () => {
                 video.play();
               },
@@ -24,7 +26,7 @@ const VideoPlayer=()=>{
     },[])
     return(
         <div className="flex flex-col justify-center py-10 items-center">
-        <video ref={videoRef} width="640" height="480" controls >
+        <video ref={videoRef} width="640" height="480" controls autoPlay >
       <source src="fountain.mp4" type="video/mp4" />
            Your browser does not support the video tag.
     </video>
