@@ -16,10 +16,10 @@ const ClientObject=()=>{
         const cadre=divCadre.current
         const ball=divBall.current
         
-        gsap.fromTo(cadre,{scaleX:0},{scaleX:1,ease:"power2.out",duration:2})
-        gsap.fromTo(image,{scaleX:0},{scaleX:1,ease:"power2.out",delay:2.5,duration:2})
-        gsap.fromTo(div,{scaleY:0},{scaleY:1,ease:'power2.out',delay:5,duration:2})
-        gsap.fromTo(ball,{scaleX:0},{scaleX:1,ease:"power2.out",delay:7.5,duration:1.5})
+        gsap.fromTo(cadre,{scaleX:0},{scaleX:1,ease:"power2.out",duration:1})
+        gsap.fromTo(image,{scaleX:0},{scaleX:1,ease:"power2.out",delay:1.5,duration:1})
+        gsap.fromTo(div,{scaleY:0},{scaleY:1,ease:'power2.out',delay:3,duration:1})
+        gsap.fromTo(ball,{scaleX:0},{scaleX:1,ease:"power2.out",delay:4.5,duration:0.75})
 
        
     },[])
