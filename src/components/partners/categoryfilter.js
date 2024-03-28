@@ -73,6 +73,7 @@ const CategoryFilter=()=>{
     return(
         <>
         <div className="px-4 py-6">
+            <h1 className="text-center text-3xl font-bold">Categories</h1>
             <div className=" flex max-lg:flex-col justify-between items-center py-8 px-4">
                 <div onClick={onOptionHandler.bind(null,"all category")} className="flex flex-col justify-center w-full items-center max-lg:py-3">
                     <h1 className={`${option=="all category"?"font-bold text-xl":""}`}>All Category</h1>
