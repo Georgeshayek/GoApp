@@ -9,6 +9,7 @@ import {
 import { GrAdd,GrSubtract  } from "react-icons/gr";
 import { useState,useEffect} from "react";
 import { useSearchParams  } from "next/navigation";
+import CategoryFilter from "@/components/partners/categoryfilter";
 const Partners=()=>{
 
     const [open, setOpen] = React.useState(0);
@@ -44,12 +45,14 @@ const Partners=()=>{
         </Accordion>
         <Accordion open={open === 3} className="p-4 bg-slate-500 text-white" icon={open===3?<GrSubtract/>:<GrAdd/>}>
           <AccordionHeader className="flex justify-between" onClick={() => handleOpen(3)}>What is Material Tailwind?</AccordionHeader>
-          <AccordionBody className={`${open === 3 ? "" : "text-transparent"}`}>
+          <AccordionBody className={`${open === 3 ? "" : "hidden"}`}>
             We&apos;re not always in the position that we want to be at. We&apos;re constantly
             growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
             ourselves and actualize our dreams.
           </AccordionBody>
         </Accordion>
+        <CategoryFilter/>
+
         </div>
       </>
     );
