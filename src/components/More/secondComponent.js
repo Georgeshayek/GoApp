@@ -18,7 +18,7 @@ const SecondComponent=()=>{
     return(
         <div className="py-8 px-4 text-white">
             <h1 className=" text-center text-3xl font-bold">Container with images</h1>
-            <div className="flex justify-between items-center">
+            <div className="flex max-lg:flex-col justify-between items-center">
                 {
                     data.map(mov=>(<div className="py-4 flex flex-col justify-center items-center">
                         <Image src={mov.imageurl} alt="image" width={400} height={350} className="min-h-[300px] rounded-xl py-3 " />

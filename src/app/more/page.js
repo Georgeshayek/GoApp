@@ -40,7 +40,7 @@ const More=()=>{
         <div className=" container mx-auto relative">
         <Hero/>
         <div className="sticky top-0 z-50">
-        <NavbarMore  scrollToRef={scrollToRef} />
+        <NavbarMore scrollToRef={scrollToRef} />
         </div>
         <div ref={firstRef}> 
         <FirstComponent/>
