@@ -37,6 +37,7 @@ const Navbar=()=>{
 				<li className="max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff}  className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/contact"?"underline decoration-blue-500":""}`} href="/contact">Contact</Link></li>
                 <li className="max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff} className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/clients"?"underline decoration-blue-500":""}`} href="/clients">Clients</Link></li>
                 <li className="max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff} className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/partners"?"underline decoration-blue-500":""}`} href="/partners">Partners</Link></li>
+                <li className="max-lg:text-center max-lg:py-4 lg:inline-block lg:mr-[10px]"><Link onClick={toggleOff} className={`py-5 px-[10px] text-white hover:underline hover:decoration-orange-500 ${path==="/more"?"underline decoration-blue-500":""}`} href="/more">More</Link></li>
 
         	</ul>
             
