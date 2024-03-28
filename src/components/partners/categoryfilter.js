@@ -23,12 +23,7 @@ const CategoryFilter=()=>{
             category:"tech"
 
         },
-        {
-            imgurl:"/Tech3.jpg",
-            title:"lorem ipsum Tech3",
-            category:"tech"
-
-        },
+        
         {
             imgurl:"/art.jpg",
             title:"lorem ipsum art",
@@ -51,6 +46,36 @@ const CategoryFilter=()=>{
             imgurl:"/art3.jpg",
             title:"lorem ipsum art3",
             category:"art"
+
+        },
+        {
+            imgurl:"/sport.jpg",
+            title:"lorem ipsum sport",
+            category:"sport"
+
+        },
+        {
+            imgurl:"/sport1.jpg",
+            title:"lorem ipsum sport1",
+            category:"sport"
+
+        },
+        {
+            imgurl:"/music.jpg",
+            title:"lorem ipsum music1",
+            category:"music"
+
+        },
+        {
+            imgurl:"/music1.jpg",
+            title:"lorem ipsum music2",
+            category:"music"
+
+        },
+        {
+            imgurl:"/music2.jpg",
+            title:"lorem ipsum music3",
+            category:"music"
 
         }
         
@@ -87,6 +112,15 @@ const CategoryFilter=()=>{
                     <h1 className={`${option=="art"?"font-bold text-xl":""}`}>Art</h1>
                     <div className={`${option=="art"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10"}  h-1`}></div>
                 </div>
+                <div onClick={onOptionHandler.bind(null,"sport")} className="flex flex-col w-full justify-center items-center  max-lg:py-3">
+                    <h1 className={`${option=="sport"?"font-bold text-xl":""}`}>Sport</h1>
+                    <div className={`${option=="sport"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10"}  h-1`}></div>
+                </div>
+                <div onClick={onOptionHandler.bind(null,"music")} className="flex flex-col w-full justify-center items-center  max-lg:py-3">
+                    <h1 className={`${option=="music"?"font-bold text-xl":""}`}>Music</h1>
+                    <div className={`${option=="music"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10"}  h-1`}></div>
+                </div>
+                
             </div>
 
             <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-2">

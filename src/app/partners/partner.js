@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { Suspense } from "react";
 import {
   Accordion,
   AccordionHeader,
@@ -10,6 +10,7 @@ import { GrAdd,GrSubtract  } from "react-icons/gr";
 import { useState,useEffect} from "react";
 import { useSearchParams  } from "next/navigation";
 import CategoryFilter from "@/components/partners/categoryfilter";
+import Loading from "@/components/Shared/Loading";
 const Partners=()=>{
 
     const [open, setOpen] = React.useState(0);
@@ -51,8 +52,9 @@ const Partners=()=>{
             ourselves and actualize our dreams.
           </AccordionBody>
         </Accordion>
+       
         <CategoryFilter/>
-
+       
         </div>
       </>
     );
