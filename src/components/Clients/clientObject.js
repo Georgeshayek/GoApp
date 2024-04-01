@@ -9,17 +9,19 @@ const ClientObject=()=>{
     const divPara=useRef(null)
     const divRef = useRef(null);
     const divBall = useRef(null);
-
+    const divName=useRef(null)
     useEffect(()=>{
         const image=divImage.current
         const div=divRef.current
         const cadre=divCadre.current
         const ball=divBall.current
+        const name=divName.current
         
         gsap.fromTo(cadre,{scaleX:0},{scaleX:1,ease:"power2.out",duration:1})
         gsap.fromTo(image,{scaleX:0},{scaleX:1,ease:"power2.out",delay:1.5,duration:1})
         gsap.fromTo(div,{scaleY:0},{scaleY:1,ease:'power2.out',delay:3,duration:1})
         gsap.fromTo(ball,{scaleX:0},{scaleX:1,ease:"power2.out",delay:4.5,duration:0.75})
+        gsap.fromTo(name,{scaleY:0},{scaleY:1,ease:"power2.out",delay:3,duration:1})
 
        
     },[])
@@ -35,7 +37,7 @@ return(
         
         
         <div ref={divBall}className="w-2 h-2 rounded-full bg-white"></div>
-        <div  className="absolute bottom-4 left-20 w-20  text-[14px] ">
+        <div ref={divName}  className="absolute bottom-4 left-20 w-20  text-[14px] ">
         <p>Georges</p>
         <p>Hello world</p>
     </div>
