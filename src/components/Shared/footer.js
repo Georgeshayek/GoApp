@@ -7,10 +7,10 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 const Footer=()=>{
     const div=useRef()
-    useEffect(()=>{
-        const el=div.current
-        gsap.fromTo(el,{opacity:0},{opacity:1,duration:2,scrollTrigger:{trigger:el}})
-    },[])
+    // useEffect(()=>{
+    //     const el=div.current
+    //     gsap.fromTo(el,{opacity:0},{opacity:1,duration:2,scrollTrigger:{trigger:el}})
+    // },[])
 
     return(
         <div className="bg-[#fe424c]">
