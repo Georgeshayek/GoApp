@@ -10,7 +10,7 @@ const Content=(props)=>{
 return(
     <div className="container mx-auto">
         <div  className="px-20 py-8">
-            <div>
+            {/* <div>
         <Link className="text-white" href={"/partners?id=1"}>first accordion</Link>
         </div>
         <div>
@@ -18,7 +18,7 @@ return(
         </div>
         <div>
         <Link className="text-white" href={"/partners?id=3"}>third accordion</Link>
-        </div>
+        </div> */}
         
         <div className="grid grid-cols-2 max-lg:grid-cols-1 max-lg:place-content-center  place-content-start gap-6">
             {props.data.map((mov,i)=>{

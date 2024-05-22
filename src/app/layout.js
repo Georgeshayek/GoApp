@@ -44,7 +44,7 @@ export default async function RootLayout({ children }) {
       <body className={inter.className}>
 
       <div className="bg-[#000]">
-        <CustomCursor/>
+        {/* <CustomCursor/> */}
       <Navbar/>
         {children}
         </div>

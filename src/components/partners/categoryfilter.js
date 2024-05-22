@@ -100,25 +100,25 @@ const CategoryFilter=()=>{
         <div className="px-4 py-6">
             <h1 className="text-center text-3xl font-bold">Categories</h1>
             <div className=" flex max-lg:flex-col justify-between items-center py-8 px-4">
-                <div onClick={onOptionHandler.bind(null,"all category")} className="flex flex-col justify-center w-full items-center max-lg:py-3">
+                <div onClick={onOptionHandler.bind(null,"all category")} className="flex flex-col cursor-pointer justify-center w-full items-center max-lg:py-3">
                     <h1 className={`${option=="all category"?"font-bold text-xl":""}`}>All Category</h1>
-                    <div className={`${option=="all category"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10"}  h-1`}></div>
+                    <div className={`${option=="all category"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10 max-lg:w-20"}  h-1`}></div>
                 </div>
-                <div onClick={onOptionHandler.bind(null,"tech")} className="flex flex-col w-full justify-center items-center  max-lg:py-3">
+                <div onClick={onOptionHandler.bind(null,"tech")} className="flex flex-col cursor-pointer w-full justify-center items-center  max-lg:py-3">
                     <h1 className={`${option=="tech"?"font-bold text-xl":""}`}>Tech</h1>
-                    <div className={`${option=="tech"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10"}  h-1`}></div>
+                    <div className={`${option=="tech"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10 max-lg:w-20"}  h-1`}></div>
                 </div>
-                <div onClick={onOptionHandler.bind(null,"art")} className="flex flex-col w-full justify-center items-center  max-lg:py-3">
+                <div onClick={onOptionHandler.bind(null,"art")} className="flex flex-col cursor-pointer w-full justify-center items-center  max-lg:py-3">
                     <h1 className={`${option=="art"?"font-bold text-xl":""}`}>Art</h1>
-                    <div className={`${option=="art"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10"}  h-1`}></div>
+                    <div className={`${option=="art"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10 max-lg:w-20"}  h-1`}></div>
                 </div>
-                <div onClick={onOptionHandler.bind(null,"sport")} className="flex flex-col w-full justify-center items-center  max-lg:py-3">
+                <div onClick={onOptionHandler.bind(null,"sport")} className="flex flex-col cursor-pointer w-full justify-center items-center  max-lg:py-3">
                     <h1 className={`${option=="sport"?"font-bold text-xl":""}`}>Sport</h1>
-                    <div className={`${option=="sport"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10"}  h-1`}></div>
+                    <div className={`${option=="sport"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10 max-lg:w-20"}  h-1`}></div>
                 </div>
-                <div onClick={onOptionHandler.bind(null,"music")} className="flex flex-col w-full justify-center items-center  max-lg:py-3">
+                <div onClick={onOptionHandler.bind(null,"music")} className="flex flex-col cursor-pointer w-full justify-center items-center  max-lg:py-3">
                     <h1 className={`${option=="music"?"font-bold text-xl":""}`}>Music</h1>
-                    <div className={`${option=="music"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10"}  h-1`}></div>
+                    <div className={`${option=="music"?"bg-white w-full ease-in duration-300":"bg-gray-500 w-10 max-lg:w-20"}  h-1`}></div>
                 </div>
                 
             </div>
